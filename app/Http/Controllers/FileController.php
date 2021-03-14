@@ -1,4 +1,10 @@
 <?php
+/********************
+ * Author:Asha chandran
+ * Date:13/3/2021
+ * Module:admin 
+ * function:file uploading and downloading
+ **********************/
 
 namespace App\Http\Controllers;
 use App\Models\File;
