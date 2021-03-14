@@ -79,9 +79,8 @@ Route::view("admn",'admin');
  * Author:Athulya a
  * Date:9/3/2021
  * Module:user
- * function:user form and view
+ * function:user form and view update
  **********************/
-
 
 Route::view('user_reg','user_reg');
 Route::get('/user_regform',[RegisterController::class,'user_register']);
@@ -89,6 +88,7 @@ Route::view("updt",'userupdate');
 Route::get('user_view',[RegisterController::class,'user_view']);
 Route::get("updates/{id}",[RegisterController::class,'userupdates']);
 Route::get("user_update/",[RegisterController::class,'update_action']);
+
 /********************
  * Author:Athulya a
  * Date:10/3/2021
@@ -100,7 +100,12 @@ Route::get('user_view',[RegisterController::class,'user_view']);
 Route::get('userlog',[RegisterController::class,'check']);
 Route::view("login",'login');
 
-
+/********************
+ * Author:Asha chandran
+ * Date:10/3/2021
+ * Module:user
+ * function:view users
+ **********************/
 
 Route::view("booked",'bookedusers');
 //Route::view("ticket",'ticketissue');
@@ -155,11 +160,24 @@ Route::view("uticket",'viewticket');
 Route::view("payment",'payment');
 Route::view("pay",'success');
 
-
+/********************
+ * Author:Athulya a
+ * Date:12/3/2021
+ * Module:user
+ * function:user flight view details
+ **********************/
 //User flight view
 Route::view("view_user_flight",'flight_view_user');
 Route::get("view_flight",[FlightController::class,'flight_view_user']);
+
 //booking
+/********************
+ * Author:Athulya a
+ * Date:12/3/2021
+ * Module:user
+ * function:user flight book details
+ **********************/
+
 Route::view("bookform/",'bookform');
 Route::get("bookformview/{id}",[FlightController::class,'flight_view_user_book']);
 
@@ -168,6 +186,12 @@ Route::get("receipt",[BookController::class,'receipt']);
 Route::get("book_table",[BookController::class,'book_table']);
 
 
+/********************
+ * Author:Asha chandran
+ * Date:13/3/2021
+ * Module:admin
+ * function:ticket upload
+ **********************/
 
 
 //file upload
@@ -176,19 +200,34 @@ Route::get('/upload-file', [FileController::class, 'createForm']);
 Route::post('/upload-file', [FileController::class, 'fileUpload'])->name('fileUpload');
 
 //download file
+/********************
+ * Author:Athulya A
+ * Date:13/3/2021
+ * Module:user
+ * function:ticket download
+ **********************/
 
 Route::get('viewfile',[FileController::class,'file_downlod']);
 //payment
-
 Route::get('payment',[BookController::class,'pay_payment']);
 Route::get('ticket',[FlightController::class,'ticket_issue']);
 Route::view('ticket_view','ticket_view');
 
-
-
 //search view
+/********************
+ * Author:Asha chandran
+ * Date:13/3/2021
+ * Module:end user
+ * function:searching
+ **********************/
 Route::view('search','search');
 //seat avalibilty
+/********************
+ * Author:Athula A
+ * Date:13/3/2021
+ * Module:User
+ * function:seat availability
+ **********************/
 Route::view('seat','seat_aval');
 Route::get('seat_avali',[FlightController::class,'seat_aval']);
 
