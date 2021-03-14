@@ -1,4 +1,10 @@
 <?php
+/********************
+ * Author:Athulya A
+ * Date:12/3/2021
+ * Module:user
+ * function:user booking
+ **********************/
 
 namespace App\Http\Controllers;
 
